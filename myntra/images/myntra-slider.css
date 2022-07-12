@@ -1,0 +1,124 @@
+
+
+
+
+/* 
+@keyframes slider{
+    0%
+    {   left: 0;  }
+    25%
+    { left: -100%; }
+    50%
+    { left: -200%; }
+    75%
+    { left: -300%; }
+    100%
+    { left: -400%; }
+
+
+} */
+
+/* ?gg slider starts here */
+ .slider {
+    width: 100%;
+    height: 500px;
+    background-color: #fff;  
+    overflow: hidden;
+}
+
+.slider_container 
+{
+   
+    height: 500px;
+
+    width: 100%;
+    display: flex;
+    position: relative;
+     left: 0;
+    height: inherit;
+    /* animation: 10s slider 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s all;
+    animation-timing-function: ease-in-out 7s all; */
+   
+    
+}
+#radio_position
+{
+    position: absolute;
+    top: 81%;
+    display: none;
+}
+
+
+#slide > img
+{
+    height: 500px;
+    width: 100%;
+}
+
+/* We have to set display: none;
+  If not, all of our images would 
+  be visible at the same time */
+
+#slide {
+    width: 100%;
+    transition: 2s;
+}
+
+#slide img {
+    width:100%;
+    height: 500px;
+
+}
+
+/* css for slide navigation */
+.navigation {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-btn {
+    border: 2px solid #de6a23;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.navigation-btn:hover {
+    background: #de6a23;
+}
+
+/* The checked attribute is used with
+reference to <input type="radio">, 
+when radio button is clicked the 
+class will shift w.r.t  left margin 
+as mentioned which results in image 
+slider */
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -100%;
+}
+
+#radio3:checked~.first {
+    margin-left: -200%;
+}
+
+#radio4:checked~.first {
+    margin-left: -300%;
+}
+
+#radio5:checked~.first {
+    margin-left: -400%;
+}
